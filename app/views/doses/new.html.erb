@@ -1,0 +1,9 @@
+<h2>What's the doses?</h2>
+
+<%= simple_form_for [ @cocktail, @dose ] do |f| %>
+  <%= f.input :description %>
+  <%= f.submit "Submit doses", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Back to #{@cocktail.name}", cocktail_path(@cocktail) %><br>
+<%= link_to "Back to all cocktails", cocktails_path %>
