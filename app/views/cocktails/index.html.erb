@@ -2,7 +2,7 @@
 
 <ul>
   <% @cocktails.each do |cocktail| %>
-    <li><%= cl_image_tag cocktail.photo.key, width: 400, height: 300, crop: :fill if cocktail.photo.attached? %><%= link_to "#{cocktail.name} | ", cocktail %><%= link_to "🗑 Remove", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %></li>
+    <li><%= cl_image_tag cocktail.photo.key, width: 400, height: 300, crop: :fill if cocktail.photo.attached? %><br><%= link_to "#{cocktail.name} | ", cocktail %><%= link_to "🗑 Remove", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %></li>
   <% end %>
 </ul>
 
